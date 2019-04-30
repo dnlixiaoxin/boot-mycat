@@ -7,7 +7,7 @@
 	</insert>
 
     <select id="find" resultType="com.lxx.boot.model.Item">
-		select * from tb_item
+		select * from tb_item order by value
 	</select>
 
 

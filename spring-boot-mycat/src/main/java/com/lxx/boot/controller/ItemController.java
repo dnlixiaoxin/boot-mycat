@@ -17,10 +17,9 @@ public class ItemController {
 	private ItemService itemService;
 	
 	@RequestMapping("/add")
-	public String add(Long id,Integer value) {
+	public String add(Integer value) {
 		Item i = new Item();
-		i.setId(id).
-                setValue(value).setDate(new Date());
+		i.setValue(value).setDate(new Date());
 		itemService.add(i);
 		return "添加成功";
 	}

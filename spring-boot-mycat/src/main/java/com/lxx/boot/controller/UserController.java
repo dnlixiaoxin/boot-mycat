@@ -12,21 +12,22 @@ import java.util.List;
 @RestController
 public class UserController {
 
-	@Resource
-	private UserService userService;
-	
-	@RequestMapping("/user/add")
-	public String add(String name) {
-		User u = new User();
-		u.setName(name).
-                setDate(new Date());
-		userService.add(u);
-		return "插入成功";
-	}
-	
-	@RequestMapping("/user/find")
-	public List<User> find() {
-		return userService.find();
-	}
-	
+    @Resource
+    private UserService userService;
+
+    @RequestMapping("/user/add")
+    public String add(Integer id) {
+        User u = new User();
+        u.setName("user" + id).
+                setDate(new Date().getTime()).
+                setUserid((long) id);
+        userService.add(u);
+        return "插入成功";
+    }
+
+    @RequestMapping("/user/find")
+    public List<User> find() {
+        return userService.find();
+    }
+
 }

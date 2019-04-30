@@ -1,4 +1,4 @@
-package com.lwl.boot;
+package com.lxx.boot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

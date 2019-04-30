@@ -3,11 +3,11 @@
 <mapper namespace="com.lxx.boot.mapper.UserMapper">
 
 	<insert id="add" useGeneratedKeys="true" keyProperty="id">
-	    insert into tb_user (name,date) values(#{name},now())
+	    insert into tb_user (name,date,userid) values(#{name},now(),#{userid})
 	</insert>
 	
 	<select id="find" resultType="com.lxx.boot.model.User">
-		select * from tb_user
+		select * from tb_user order by userid
 	</select>
 	
 
