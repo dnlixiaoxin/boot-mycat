@@ -3,11 +3,11 @@
 <mapper namespace="com.lxx.boot.mapper.ItemMapper">
 
     <insert id="add" useGeneratedKeys="true" keyProperty="id">
-	    insert into item (id,value,indate) values(#{id},#{value},now())
+	    insert into tb_item (id,value,date) values(#{id},#{value},now())
 	</insert>
 
     <select id="find" resultType="com.lxx.boot.model.Item">
-		select * from item
+		select * from tb_item
 	</select>
 
 

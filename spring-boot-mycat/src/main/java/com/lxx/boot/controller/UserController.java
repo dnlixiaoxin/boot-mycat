@@ -1,7 +1,7 @@
 package com.lxx.boot.controller;
 
-import com.lxx.boot.model.Users;
-import com.lxx.boot.service.UsersService;
+import com.lxx.boot.model.User;
+import com.lxx.boot.service.UserService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,20 +13,20 @@ import java.util.List;
 public class UserController {
 
 	@Resource
-	private UsersService usersService;
+	private UserService userService;
 	
 	@RequestMapping("/user/add")
 	public String add(String name) {
-		Users u = new Users();
+		User u = new User();
 		u.setName(name).
-                setIndate(new Date());
-		usersService.add(u);
+                setDate(new Date());
+		userService.add(u);
 		return "插入成功";
 	}
 	
 	@RequestMapping("/user/find")
-	public List<Users> find() {
-		return usersService.find();
+	public List<User> find() {
+		return userService.find();
 	}
 	
 }

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ItemService {
 	
-	public void add(Item i);
+	void add(Item i);
 	
 	List<Item> find();
 	

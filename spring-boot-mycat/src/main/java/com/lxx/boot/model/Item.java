@@ -10,12 +10,10 @@ import java.util.Date;
 @Accessors(chain = true)
 public class Item implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-
 	private long id;
 	
 	private int value;
 	
-	private Date indate;
+	private Date date;
 	
 }
