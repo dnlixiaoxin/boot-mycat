@@ -1,14 +1,12 @@
-package com.lwl.boot.service.impl;
+package com.lxx.boot.service.impl;
 
-import java.util.List;
-
-import javax.annotation.Resource;
-
+import com.lxx.boot.mapper.ItemMapper;
+import com.lxx.boot.model.Item;
+import com.lxx.boot.service.ItemService;
 import org.springframework.stereotype.Service;
 
-import com.lwl.boot.mapper.ItemMapper;
-import com.lwl.boot.model.Item;
-import com.lwl.boot.service.ItemService;
+import javax.annotation.Resource;
+import java.util.List;
 
 @Service("itemService")
 public class ItemServiceImpl implements ItemService {

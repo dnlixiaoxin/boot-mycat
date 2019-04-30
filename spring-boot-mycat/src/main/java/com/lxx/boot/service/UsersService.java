@@ -1,8 +1,8 @@
-package com.lwl.boot.service;
+package com.lxx.boot.service;
+
+import com.lxx.boot.model.Users;
 
 import java.util.List;
-
-import com.lwl.boot.model.Users;
 
 public interface UsersService {
 

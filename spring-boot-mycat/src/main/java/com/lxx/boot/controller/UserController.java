@@ -1,15 +1,13 @@
-package com.lwl.boot.controller;
+package com.lxx.boot.controller;
 
-import java.util.Date;
-import java.util.List;
-
-import javax.annotation.Resource;
-
+import com.lxx.boot.model.Users;
+import com.lxx.boot.service.UsersService;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lwl.boot.model.Users;
-import com.lwl.boot.service.UsersService;
+import javax.annotation.Resource;
+import java.util.Date;
+import java.util.List;
 
 @RestController
 public class UserController {
@@ -20,7 +18,8 @@ public class UserController {
 	@RequestMapping("/user/add")
 	public String add(String name) {
 		Users u = new Users();
-		u.setName(name).setIndate(new Date());
+		u.setName(name).
+                setIndate(new Date());
 		usersService.add(u);
 		return "插入成功";
 	}
